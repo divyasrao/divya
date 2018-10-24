@@ -1,0 +1,67 @@
+{
+	"name": "GetBlobListAndTriggerCopyData",
+	"properties": {
+		"activities": [
+			{
+				"name": "LookupBlobList",
+				"type": "Lookup",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "AzureBlobName1",
+						"value": "ELC_BHT_Q1_Database_Brand_Table.csv"
+					},
+					{
+						"name": "AzureBlobName2",
+						"value": "ELC_BHT_Q1_Database_Respondent_Table.csv"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"dataset": {
+						"referenceName": "AzureBlobDataset",
+						"type": "DatasetReference",
+						"parameters": {
+							"AzureBlobName": "@activity('LookupBlobList').output.value"
+						}
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "TriggerCopy",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "LookupBlobList",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "IterateAndCopySQLTables",
+						"type": "PipelineReference"
+					},
+					"parameters": {
+						"AzureBlobList": {
+							"value": "@activity('LookupBlobList').output.value",
+							"type": "Expression"
+						}
+					}
+				}
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

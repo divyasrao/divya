@@ -1,0 +1,143 @@
+{
+	"name": "CopyPipeline_NPD",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_6xo",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "samplefilesfiltered/HANA_NPD_output.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[sample_HANA_NPD_output_NEW]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"writeBatchSize": 10000,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "elchdiblob_LS",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"0CALYEAR": "CALYEAR",
+							"0CALMONTH": "CALMONTH",
+							"0CALQUARTER": "CALQUARTER",
+							"0CALQUART1": "CALQUART1",
+							"0FISCYEAR": "FISCYEAR",
+							"0FISCPER": "FISCPER",
+							"0FISCPER3": "FISCPER3",
+							"ZFISCQTER": "ZFISCQTER",
+							"ZFISCQTER___T": "ZFISCQTER___T",
+							"ZFISCQTR1": "ZFISCQTR1",
+							"ZFISCQTR1___T": "ZFISCQTR1___T",
+							"ZLAUQRT": "ZLAUQRT",
+							"ZLAUFQTR": "ZLAUFQTR",
+							"ZLAUYR": "ZLAUYR",
+							"ZLAUFYR": "ZLAUFYR",
+							"ZLAUMTH": "ZLAUMTH",
+							"ZLAUPER": "ZLAUPER",
+							"ZMAJORCAT": "ZMAJORCAT",
+							"ZMAJORCAT___T": "ZMAJORCAT___T",
+							"ZCATEGORY": "ZCATEGORY",
+							"ZCATEGORY___T": "ZCATEGORY___T",
+							"ZAFFSBRGN": "ZAFFSBRGN",
+							"ZAFFSBRGN___T": "ZAFFSBRGN___T",
+							"ZAFFLVL5": "ZAFFLVL5",
+							"ZAFFLVL5___T": "ZAFFLVL5___T",
+							"ZBRAND": "ZBRAND",
+							"ZBRAND___T": "ZBRAND___T",
+							"0DIVISION": "DIVISION",
+							"0DIVISION___T": "DIVISION___T",
+							"0CURRENCY": "CURRENCY",
+							"0CURRENCY___T": "CURRENCY___T",
+							"ZMKTBRD": "ZMKTBRD",
+							"ZMKTCTRY": "ZMKTCTRY",
+							"ZMKTPRD": "ZMKTPRD",
+							"ZBTECAT": "ZBTECAT",
+							"ZIRICAT": "ZIRICAT",
+							"ZNLSCAT": "ZNLSCAT",
+							"ZNPDSSEG": "ZNPDSSEG",
+							"ZBNFFORM": "ZBNFFORM",
+							"BENEFITS_LIST": "BENEFITS_LIST",
+							"ZFRANCH": "ZFRANCH",
+							"ZNEWIN": "ZNEWIN",
+							"ZSPF": "ZSPF",
+							"ZCORP": "ZCORP",
+							"ZNPDFORM": "ZNPDFORM",
+							"ZNPDITEM": "ZNPDITEM",
+							"ZNPDCHAN": "ZNPDCHAN",
+							"ZSEGCAT": "ZSEGCAT",
+							"ZSEGSCAT": "ZSEGSCAT",
+							"ZCOMPANY": "ZCOMPANY",
+							"ZLINES": "ZLINES",
+							"ZGOWNER": "ZGOWNER",
+							"ZSWZCAT": "ZSWZCAT",
+							"ZSWZMAN": "ZSWZMAN",
+							"ZSWZSEG": "ZSWZSEG",
+							"ZSWZSSEG": "ZSWZSSEG",
+							"Source": "Source",
+							"0BASE_UOM": "BASE_UOM",
+							"0BASE_UOM___T": "BASE_UOM___T",
+							"ZMKT_NPRC": "ZMKT_NPRC",
+							"ZMKT_RPRC": "ZMKT_RPRC",
+							"AMOUNT_USD_CURRENCY": "AMOUNT_USD_CURRENCY",
+							"CALQTR_DATE": "CALQTR_DATE",
+							"CALMONTH_DATE": "CALMONTH_DATE",
+							"FY_LABEL": "FY_LABEL",
+							"FQ_LABEL": "FQ_LABEL",
+							"CurrFiscYear": "CurrFiscYear",
+							"CurrCalYear": "CurrCalYear",
+							"0AMOUNT": "AMOUNT",
+							"ZMKTQTY": "ZMKTQTY",
+							"AMOUNT_USD": "AMOUNT_USD"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "NPDDataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_6xo",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "EsteeLauderLoadPipeline"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

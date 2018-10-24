@@ -1,0 +1,494 @@
+{
+	"name": "SourceDataset_h4o",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Sftp1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "FileShare",
+		"structure": [
+			{
+				"name": "BKPF_ID",
+				"type": "Int64"
+			},
+			{
+				"name": "MANDT",
+				"type": "Int64"
+			},
+			{
+				"name": "BUKRS",
+				"type": "String"
+			},
+			{
+				"name": "BELNR",
+				"type": "Int64"
+			},
+			{
+				"name": "GJAHR",
+				"type": "Int64"
+			},
+			{
+				"name": "BLART",
+				"type": "String"
+			},
+			{
+				"name": "BLDAT",
+				"type": "String"
+			},
+			{
+				"name": "BUDAT",
+				"type": "String"
+			},
+			{
+				"name": "MONAT",
+				"type": "Int64"
+			},
+			{
+				"name": "CPUDT",
+				"type": "String"
+			},
+			{
+				"name": "CPUTM",
+				"type": "String"
+			},
+			{
+				"name": "AEDAT",
+				"type": "DateTime"
+			},
+			{
+				"name": "UPDDT",
+				"type": "DateTime"
+			},
+			{
+				"name": "WWERT",
+				"type": "String"
+			},
+			{
+				"name": "USNAM",
+				"type": "String"
+			},
+			{
+				"name": "TCODE",
+				"type": "String"
+			},
+			{
+				"name": "BVORG",
+				"type": "String"
+			},
+			{
+				"name": "XBLNR",
+				"type": "String"
+			},
+			{
+				"name": "DBBLG",
+				"type": "String"
+			},
+			{
+				"name": "STBLG",
+				"type": "String"
+			},
+			{
+				"name": "STJAH",
+				"type": "Int64"
+			},
+			{
+				"name": "BKTXT",
+				"type": "String"
+			},
+			{
+				"name": "WAERS",
+				"type": "String"
+			},
+			{
+				"name": "KURSF",
+				"type": "Decimal"
+			},
+			{
+				"name": "KZWRS",
+				"type": "String"
+			},
+			{
+				"name": "KZKRS",
+				"type": "Decimal"
+			},
+			{
+				"name": "BSTAT",
+				"type": "String"
+			},
+			{
+				"name": "XNETB",
+				"type": "String"
+			},
+			{
+				"name": "FRATH",
+				"type": "Decimal"
+			},
+			{
+				"name": "XRUEB",
+				"type": "String"
+			},
+			{
+				"name": "GLVOR",
+				"type": "String"
+			},
+			{
+				"name": "GRPID",
+				"type": "String"
+			},
+			{
+				"name": "DOKID",
+				"type": "String"
+			},
+			{
+				"name": "ARCID",
+				"type": "String"
+			},
+			{
+				"name": "IBLAR",
+				"type": "String"
+			},
+			{
+				"name": "AWTYP",
+				"type": "String"
+			},
+			{
+				"name": "AWKEY",
+				"type": "String"
+			},
+			{
+				"name": "FIKRS",
+				"type": "String"
+			},
+			{
+				"name": "HWAER",
+				"type": "String"
+			},
+			{
+				"name": "HWAE2",
+				"type": "String"
+			},
+			{
+				"name": "HWAE3",
+				"type": "String"
+			},
+			{
+				"name": "KURS2",
+				"type": "Decimal"
+			},
+			{
+				"name": "KURS3",
+				"type": "Decimal"
+			},
+			{
+				"name": "BASW2",
+				"type": "String"
+			},
+			{
+				"name": "BASW3",
+				"type": "String"
+			},
+			{
+				"name": "UMRD2",
+				"type": "String"
+			},
+			{
+				"name": "UMRD3",
+				"type": "String"
+			},
+			{
+				"name": "XSTOV",
+				"type": "String"
+			},
+			{
+				"name": "STODT",
+				"type": "DateTime"
+			},
+			{
+				"name": "XMWST",
+				"type": "String"
+			},
+			{
+				"name": "CURT2",
+				"type": "String"
+			},
+			{
+				"name": "CURT3",
+				"type": "String"
+			},
+			{
+				"name": "KUTY2",
+				"type": "String"
+			},
+			{
+				"name": "KUTY3",
+				"type": "String"
+			},
+			{
+				"name": "XSNET",
+				"type": "String"
+			},
+			{
+				"name": "AUSBK",
+				"type": "String"
+			},
+			{
+				"name": "XUSVR",
+				"type": "String"
+			},
+			{
+				"name": "DUEFL",
+				"type": "String"
+			},
+			{
+				"name": "AWSYS",
+				"type": "String"
+			},
+			{
+				"name": "TXKRS",
+				"type": "Decimal"
+			},
+			{
+				"name": "CTXKRS",
+				"type": "Decimal"
+			},
+			{
+				"name": "LOTKZ",
+				"type": "String"
+			},
+			{
+				"name": "XWVOF",
+				"type": "String"
+			},
+			{
+				"name": "STGRD",
+				"type": "String"
+			},
+			{
+				"name": "PPNAM",
+				"type": "String"
+			},
+			{
+				"name": "BRNCH",
+				"type": "String"
+			},
+			{
+				"name": "NUMPG",
+				"type": "Int64"
+			},
+			{
+				"name": "ADISC",
+				"type": "String"
+			},
+			{
+				"name": "XREF1_HD",
+				"type": "String"
+			},
+			{
+				"name": "XREF2_HD",
+				"type": "String"
+			},
+			{
+				"name": "XREVERSAL",
+				"type": "String"
+			},
+			{
+				"name": "REINDAT",
+				"type": "DateTime"
+			},
+			{
+				"name": "RLDNR",
+				"type": "String"
+			},
+			{
+				"name": "LDGRP",
+				"type": "String"
+			},
+			{
+				"name": "PROPMANO",
+				"type": "String"
+			},
+			{
+				"name": "XBLNR_ALT",
+				"type": "String"
+			},
+			{
+				"name": "VATDATE",
+				"type": "DateTime"
+			},
+			{
+				"name": "DOCCAT",
+				"type": "String"
+			},
+			{
+				"name": "XSPLIT",
+				"type": "String"
+			},
+			{
+				"name": "CASH_ALLOC",
+				"type": "String"
+			},
+			{
+				"name": "FOLLOW_ON",
+				"type": "String"
+			},
+			{
+				"name": "XREORG",
+				"type": "String"
+			},
+			{
+				"name": "SUBSET",
+				"type": "String"
+			},
+			{
+				"name": "KURST",
+				"type": "String"
+			},
+			{
+				"name": "KURSX",
+				"type": "Decimal"
+			},
+			{
+				"name": "KUR2X",
+				"type": "Decimal"
+			},
+			{
+				"name": "KUR3X",
+				"type": "Decimal"
+			},
+			{
+				"name": "XMCA",
+				"type": "String"
+			},
+			{
+				"name": "RESUBMISSION",
+				"type": "DateTime"
+			},
+			{
+				"name": "/SAPF15/STATUS",
+				"type": "String"
+			},
+			{
+				"name": "PSOTY",
+				"type": "String"
+			},
+			{
+				"name": "PSOAK",
+				"type": "String"
+			},
+			{
+				"name": "PSOKS",
+				"type": "String"
+			},
+			{
+				"name": "PSOSG",
+				"type": "String"
+			},
+			{
+				"name": "PSOFN",
+				"type": "String"
+			},
+			{
+				"name": "INTFORM",
+				"type": "String"
+			},
+			{
+				"name": "INTDATE",
+				"type": "DateTime"
+			},
+			{
+				"name": "PSOBT",
+				"type": "DateTime"
+			},
+			{
+				"name": "PSOZL",
+				"type": "String"
+			},
+			{
+				"name": "PSODT",
+				"type": "DateTime"
+			},
+			{
+				"name": "PSOTM",
+				"type": "String"
+			},
+			{
+				"name": "FM_UMART",
+				"type": "String"
+			},
+			{
+				"name": "CCINS",
+				"type": "String"
+			},
+			{
+				"name": "CCNUM",
+				"type": "String"
+			},
+			{
+				"name": "SSBLK",
+				"type": "String"
+			},
+			{
+				"name": "BATCH",
+				"type": "String"
+			},
+			{
+				"name": "SNAME",
+				"type": "String"
+			},
+			{
+				"name": "SAMPLED",
+				"type": "String"
+			},
+			{
+				"name": "EXCLUDE_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "BLIND",
+				"type": "String"
+			},
+			{
+				"name": "OFFSET_STATUS",
+				"type": "String"
+			},
+			{
+				"name": "OFFSET_REFER_DAT",
+				"type": "DateTime"
+			},
+			{
+				"name": "PENRC",
+				"type": "String"
+			},
+			{
+				"name": "KNUMV",
+				"type": "String"
+			},
+			{
+				"name": "INSERTED_DT",
+				"type": "DateTime"
+			},
+			{
+				"name": "UPDATED_DT",
+				"type": "String"
+			},
+			{
+				"name": "CURRENT_IND",
+				"type": "Int64"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "ELC BHT Q1 Database Respondent.csv",
+			"folderPath": "/papl/ELC"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

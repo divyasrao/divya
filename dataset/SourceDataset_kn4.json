@@ -1,0 +1,80 @@
+{
+	"name": "SourceDataset_kn4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "elchdiblob_LS",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "Review ID",
+				"type": "Int64"
+			},
+			{
+				"name": "Online statement ID",
+				"type": "Int64"
+			},
+			{
+				"name": "Post Date",
+				"type": "DateTime"
+			},
+			{
+				"name": "Title",
+				"type": "String"
+			},
+			{
+				"name": "Content",
+				"type": "String"
+			},
+			{
+				"name": "Geography",
+				"type": "String"
+			},
+			{
+				"name": "Channel",
+				"type": "String"
+			},
+			{
+				"name": "Product ID",
+				"type": "String"
+			},
+			{
+				"name": "Sentiment",
+				"type": "String"
+			},
+			{
+				"name": "Feature",
+				"type": "String"
+			},
+			{
+				"name": "Benefit",
+				"type": "String"
+			},
+			{
+				"name": "Ingredient",
+				"type": "String"
+			},
+			{
+				"name": "Solution Type",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"quoteChar": "\"",
+				"nullValue": "\\N",
+				"encodingName": null,
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "Cosmetics_Social_Media_Sampled_Data_finaldata.csv",
+			"folderPath": "samplefilesfiltered"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

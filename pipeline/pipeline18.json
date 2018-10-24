@@ -1,0 +1,149 @@
+{
+	"name": "pipeline18",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy Data1",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": false,
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"region": "region",
+							"affiliate": "affiliate",
+							"currency": "currency",
+							"store_id": "store_ID",
+							"store_name": "store_name",
+							"store_email_id": "store_email_ID",
+							"district_lead_email_id": "District_Lead_Email_id",
+							"regional_lead_email_id": "Regional_Lead_Email_id",
+							"zone_lead_email_id": "Zone_Lead_Email_id",
+							"brand_corporate_email_id": "Brand_Corp_Lead_Email_id",
+							"corporate_email_id": "Corp_User_Email_id",
+							"email_id": "email_id",
+							"business_type": "business_type",
+							"brand": "brand",
+							"comp_flag": "comp_flag",
+							"time_period": "time_Period",
+							"month_year": "Month_Year",
+							"day_of_week": "Day_of_Week",
+							"time_of_day": "Time_of_Day",
+							"net_sales_value_ty": "net_sales_value_ty",
+							"net_sales_value_ly": "net_sales_value_ly",
+							"net_sales_value_var_ly": "net_sales_value_var_ly",
+							"net_sales_value_var_ly_pct": "net_sales_value_var_ly_pct",
+							"net_sales_value_var_plan": "net_sales_value_var_plan",
+							"net_sales_value_var_plan_pct": "net_sales_value_var_plan_pct",
+							"net_sales_units_ty": "net_sales_units_ty",
+							"net_sales_units_ly": "net_sales_units_ly",
+							"net_sales_units_var_ly": "net_sales_units_var_ly",
+							"net_sales_units_var_ly_pct": "net_sales_units_var_ly_pct",
+							"planned_sales_value_ty": "planned_sales_value_ty",
+							"planned_sales_value_ly": "planned_sales_value_ly",
+							"planned_sales_value_var_ly": "planned_sales_value_var_ly",
+							"planned_sales_value_var_ly_pct": "planned_sales_value_var_ly_pct",
+							"ast_ty": "ast_ty",
+							"ast_ly": "ast_ly",
+							"ast_var_ly": "ast_var_ly",
+							"ast_var_ly_pct": "ast_var_ly_pct",
+							"upt_ty": "upt_ty",
+							"upt_ly": "upt_ly",
+							"upt_var_ly": "upt_var_ly",
+							"upt_var_ly_pct": "upt_var_ly_pct",
+							"aus_ty": "aus_ty",
+							"aus_ly": "aus_ly",
+							"aus_var_ly": "aus_var_ly",
+							"aus_var_ly_pct": "aus_var_ly_pct",
+							"transactions_ty": "transactions_ty",
+							"transactions_ly": "transactions_ly",
+							"transactions_var_ly": "transactions_var_ly",
+							"transactions_var_ly_pct": "transactions_var_ly_pct",
+							"return_value_ty": "return_value_ty",
+							"return_value_ly": "return_value_ly",
+							"return_value_var_ly": "return_value_var_ly",
+							"return_value_var_ly_pct": "return_value_var_ly_pct",
+							"return_net_sales_pct_ty": "return_net_sales_pct_ty",
+							"return_net_sales_pct_ly": "return_net_sales_pct_ly",
+							"return_net_sales_pct_var_ly": "return_net_sales_pct_var_ly",
+							"discount_value_ty": "discount_value_ty",
+							"discount_value_ly": "discount_value_ly",
+							"discount_value_var_ly": "discount_value_var_ly",
+							"discount_value_var_ly_pct": "discount_value_var_ly_pct",
+							"discount_net_sales_pct_ty": "discount_net_sales_pct_ty",
+							"discount_net_sales_pct_ly": "discount_net_sales_pct_ly",
+							"discount_net_sales_pct_var_ly": "discount_net_sales_pct_var_ly",
+							"traffic_ty": "traffic_ty",
+							"traffic_ly": "traffic_ly",
+							"traffic_var_ly": "traffic_var_ly",
+							"traffic_var_ly_pct": "traffic_var_ly_pct",
+							"conversion_ty": "conversion_ty",
+							"conversion_ly": "conversion_ly",
+							"conversion_var_ly": "conversion_var_ly",
+							"conversion_var_ly_pct": "conversion_var_ly_pct",
+							"conversion_pct_ty": "conversion_pct_ty",
+							"conversion_pct_ly": "conversion_pct_ly",
+							"conversion_pct_var_ly": "conversion_pct_var_ly",
+							"nc_acquisition_ty": "nc_acquisition_ty",
+							"nc_acquisition_ly": "nc_acquisition_ly",
+							"nc_acquisition_var_ly": "nc_acquisition_var_ly",
+							"nc_acquisition_var_ly_pct": "nc_acquisition_var_ly_pct",
+							"nc_net_sales_value_ty": "nc_net_sales_value_ty",
+							"nc_net_sales_value_ly": "nc_net_sales_value_ly",
+							"nc_net_sales_value_var_ly": "nc_net_sales_value_var_ly",
+							"nc_net_sales_value_var_ly_pct": "nc_net_sales_value_var_ly_pct",
+							"nc_net_sales_value_pct_ty": "nc_net_sales_value_pct_ty",
+							"nc_net_sales_value_pct_ly": "nc_net_sales_value_pct_ly",
+							"nc_net_sales_value_pct_var_ly": "nc_net_sales_value_pct_var_ly",
+							"nc_transactions_ty": "nc_transactions_ty",
+							"nc_transactions_ly": "nc_transactions_ly",
+							"nc_transactions_var_ly": "nc_transactions_var_ly",
+							"nc_transactions_var_ly_pct": "nc_transactions_var_ly_pct",
+							"nc_ast_ty": "nc_ast_ty",
+							"nc_ast_ly": "nc_ast_ly",
+							"nc_ast_var_ly": "nc_ast_var_ly",
+							"nc_ast_var_ly_pct": "nc_ast_var_ly_pct",
+							"nc_upt_ty": "nc_upt_ty",
+							"nc_upt_ly": "nc_upt_ly",
+							"nc_upt_var_ly": "nc_upt_var_ly",
+							"nc_upt_var_ly_pct": "nc_upt_var_ly_pct"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlob16",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlDWTable3",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "ELC_DSF"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

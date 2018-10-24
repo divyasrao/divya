@@ -1,0 +1,84 @@
+{
+	"name": "DestinationDataset_ov2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "ReviewID",
+				"type": "Int32"
+			},
+			{
+				"name": "OnlineStatementID",
+				"type": "Int32"
+			},
+			{
+				"name": "ReviewDate",
+				"type": "String"
+			},
+			{
+				"name": "Title",
+				"type": "String"
+			},
+			{
+				"name": "Content",
+				"type": "String"
+			},
+			{
+				"name": "Geography",
+				"type": "String"
+			},
+			{
+				"name": "Channel",
+				"type": "String"
+			},
+			{
+				"name": "ProductID",
+				"type": "Int32"
+			},
+			{
+				"name": "Rating",
+				"type": "Int32"
+			},
+			{
+				"name": "Sentiment",
+				"type": "String"
+			},
+			{
+				"name": "Feature",
+				"type": "String"
+			},
+			{
+				"name": "Benefit",
+				"type": "String"
+			},
+			{
+				"name": "Ingredient",
+				"type": "String"
+			},
+			{
+				"name": "Brand",
+				"type": "String"
+			},
+			{
+				"name": "SolutionType",
+				"type": "String"
+			},
+			{
+				"name": "Product",
+				"type": "String"
+			},
+			{
+				"name": "ProductForm",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Cosmetics_Reviews_Sampled_Data]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

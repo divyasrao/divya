@@ -1,0 +1,96 @@
+{
+	"name": "CopyPipeline_Brand_Table",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_rzg",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "samplefilesfiltered/ELC_BHT_Q1_Database_Brand_Table.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Sample_ELC_Database_Brand_Table_ADF]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"writeBatchSize": 10000,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "elchdiblob_LS",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"rowID": "rowID",
+							"caseID": "caseID",
+							"stackedBrand": "stackedBrand",
+							"brandClass": "brandClass",
+							"firstMentionQ8": "firstMentionQ8",
+							"unaidedAwarenessQ8": "unaidedAwarenessQ8",
+							"aidedAwarenessQ9": "aidedAwarenessQ9",
+							"P12MBrandPurchaseQ10": "P12MBrandPurchaseQ10",
+							"firstTimeP12MPurchaseQ10a": "firstTimeP12MPurchaseQ10a",
+							"P3MPurchaseQ11": "P3MPurchaseQ11",
+							"P1MUsageQ12": "P1MUsageQ12",
+							"considerQ15": "considerQ15",
+							"considerationSetQ15a": "considerationSetQ15a",
+							"subcatBrandUsageQ17FSC_bf": "subcatBrandUsageQ17FSC_bf",
+							"subcatBrandUsageQ17MU_bf": "subcatBrandUsageQ17MU_bf",
+							"purchaseIntentQ18": "purchaseIntentQ18",
+							"brandLoveQ18b": "brandLoveQ18b",
+							"brandLoveShare": "brandLoveShare",
+							"BRAND_RATED": "BRAND_RATED",
+							"imageryQ19FSC_bf": "imageryQ19FSC_bf",
+							"imageryQ19MU_bf": "imageryQ19MU_bf",
+							"touchpointsQ20_bf": "touchpointsQ20_bf",
+							"barriersQ21FSC_bf": "barriersQ21FSC_bf",
+							"barriersQ21MU_bf": "barriersQ21MU_bf"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "BrandDataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_rzg",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "EsteeLauderLoadPipeline"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

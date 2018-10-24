@@ -1,0 +1,32 @@
+{
+	"name": "AzureBlob11",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "elchdiblob_LS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"AzureBlobList": {
+				"type": "String"
+			}
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "",
+			"folderPath": {
+				"value": "@dataset().AzureBlobList",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

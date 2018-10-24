@@ -1,0 +1,168 @@
+{
+	"name": "CopyPipeline_RespondantTable",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "samplefilesfiltered/ELC_BHT_Q1_Database_Respondent_Table.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Sample_ELC_BHT_Q1_Database_Respondent_Table]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"writeBatchSize": 10000,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "elchdiblob_LS",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Prop_0": "caseID",
+							"Prop_1": "round",
+							"Prop_2": "weight",
+							"Prop_3": "year",
+							"Prop_4": "month",
+							"Prop_5": "finalAge",
+							"Prop_6": "adult",
+							"Prop_7": "ageGroupWide",
+							"Prop_8": "ageGroupTight",
+							"Prop_9": "category",
+							"Prop_10": "prestigeRetailer",
+							"Prop_11": "Groupcode",
+							"Prop_12": "country",
+							"Prop_13": "chinaTier",
+							"Prop_14": "countryTiered",
+							"Prop_15": "eduCN",
+							"Prop_16": "eduFR",
+							"Prop_17": "eduSK",
+							"Prop_18": "eduUK",
+							"Prop_19": "eduUS",
+							"Prop_20": "ethUK",
+							"Prop_21": "hispOriginUS",
+							"Prop_22": "ethUS_1",
+							"Prop_23": "ethUS_2",
+							"Prop_24": "ethUS_3",
+							"Prop_25": "ethUS_4",
+							"Prop_26": "ethUS_5",
+							"Prop_27": "ethUS_6",
+							"Prop_28": "ethUS_7",
+							"Prop_29": "ETH_QUOTAS_US_1",
+							"Prop_30": "ETH_QUOTAS_US_2",
+							"Prop_31": "ETH_QUOTAS_US_3",
+							"Prop_32": "ETH_QUOTAS_US_4",
+							"Prop_33": "maritalStatusCN",
+							"Prop_34": "maritalStatusFR",
+							"Prop_35": "maritalStatusSK",
+							"Prop_36": "maritalStatusUK",
+							"Prop_37": "maritalStatusUS",
+							"Prop_38": "hhComp",
+							"Prop_39": "hhCompSK",
+							"Prop_40": "kidsinHH",
+							"Prop_41": "kidsInHHSK",
+							"Prop_42": "income",
+							"Prop_43": "incomeMedian",
+							"Prop_44": "employment",
+							"Prop_45": "employmentSK",
+							"Prop_46": "region",
+							"Prop_47": "regionUS",
+							"Prop_48": "retailerDeptStoreQ13_bf",
+							"Prop_49": "retailerUpscaleDeptStoreQ13_bf",
+							"Prop_50": "retailerRegularDeptStoreQ13_bf",
+							"Prop_51": "retailerDiscountDeptStoreQ13_bf",
+							"Prop_52": "retailerFreeStandingQ13_bf",
+							"Prop_53": "retailerSpecMultiQ13_bf",
+							"Prop_54": "retailerDrugStoreQ13_bf",
+							"Prop_55": "retailerHealthBeautyStoreQ13_bf",
+							"Prop_56": "retailerMassMerchandiserQ13_bf",
+							"Prop_57": "retailerChainStoreQ13_bf",
+							"Prop_58": "retailerShoppingMallsQ13_bf",
+							"Prop_59": "retailerDutyFreeQ13_bf",
+							"Prop_60": "retailerOfflineOverseasQ13_bf",
+							"Prop_61": "retailerDoorToDoorQ13_bf",
+							"Prop_62": "retailerDirectSalesTVQ13_bf",
+							"Prop_63": "retailerOnlineQ13_bf",
+							"Prop_64": "retailerSamplingSubscriptionQ13_bf",
+							"Prop_65": "retailerDistinctChannelsQ13_bf",
+							"Prop_66": "retailerDeptStoreQ14_bf",
+							"Prop_67": "retailerUpscaleDeptStoreQ14_bf",
+							"Prop_68": "retailerRegularDeptStoreQ14_bf",
+							"Prop_69": "retailerDiscountDeptStoreQ14_bf",
+							"Prop_70": "retailerFreeStandingQ14_bf",
+							"Prop_71": "retailerSpecMultiQ14_bf",
+							"Prop_72": "retailerDrugStoreQ14_bf",
+							"Prop_73": "retailerHealthBeautyStoreQ14_bf",
+							"Prop_74": "retailerMassMerchandiserQ14_bf",
+							"Prop_75": "retailerChainStoreQ14_bf",
+							"Prop_76": "retailerShoppingMallsQ14_bf",
+							"Prop_77": "retailerDutyFreeQ14_bf",
+							"Prop_78": "retailerOfflineOverseasQ14_bf",
+							"Prop_79": "retailerDoorToDoorQ14_bf",
+							"Prop_80": "retailerDirectSalesTVQ14_bf",
+							"Prop_81": "retailerOnlineQ14_bf",
+							"Prop_82": "retailerSamplingSubscriptionQ14_bf",
+							"Prop_83": "retailerDistinctChannelsQ14_bf",
+							"Prop_84": "subcatPenetrationQ16FSC_bf",
+							"Prop_85": "numberSubcatsUsedFSC",
+							"Prop_86": "subcatPenetrationQ16MU_bf",
+							"Prop_87": "numberSubcatsUsedMU",
+							"Prop_88": "brandsAware",
+							"Prop_89": "ELCBrandsPurchasedP3M",
+							"Prop_90": "NonELCBrandsPurchasedP3M",
+							"Prop_91": "AllBrandsPurchasedP3M",
+							"Prop_92": "MassBrandsPurchasedP3M",
+							"Prop_93": "MassBrandBuyerP3M",
+							"Prop_94": "incomeGroup",
+							"Prop_95": "numMarketBrands"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "RespondantDataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_gsg",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "EsteeLauderLoadPipeline"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

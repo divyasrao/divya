@@ -1,0 +1,416 @@
+{
+	"name": "AzureBlob18",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "region",
+				"type": "String"
+			},
+			{
+				"name": "affiliate",
+				"type": "String"
+			},
+			{
+				"name": "currency",
+				"type": "String"
+			},
+			{
+				"name": "store_id",
+				"type": "String"
+			},
+			{
+				"name": "store_name",
+				"type": "String"
+			},
+			{
+				"name": "store_email_id",
+				"type": "String"
+			},
+			{
+				"name": "district_lead_email_id",
+				"type": "String"
+			},
+			{
+				"name": "regional_lead_email_id",
+				"type": "String"
+			},
+			{
+				"name": "zone_lead_email_id",
+				"type": "String"
+			},
+			{
+				"name": "brand_corporate_email_id",
+				"type": "String"
+			},
+			{
+				"name": "corporate_email_id",
+				"type": "String"
+			},
+			{
+				"name": "email_id",
+				"type": "String"
+			},
+			{
+				"name": "business_type",
+				"type": "String"
+			},
+			{
+				"name": "brand",
+				"type": "String"
+			},
+			{
+				"name": "comp_flag",
+				"type": "String"
+			},
+			{
+				"name": "time_period",
+				"type": "String"
+			},
+			{
+				"name": "month_year",
+				"type": "String"
+			},
+			{
+				"name": "day_of_week",
+				"type": "String"
+			},
+			{
+				"name": "time_of_day",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_value_ty",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_value_ly",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_value_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_value_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_value_var_plan",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_value_var_plan_pct",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_units_ty",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_units_ly",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_units_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "net_sales_units_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "planned_sales_value_ty",
+				"type": "String"
+			},
+			{
+				"name": "planned_sales_value_ly",
+				"type": "String"
+			},
+			{
+				"name": "planned_sales_value_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "planned_sales_value_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "ast_ty",
+				"type": "String"
+			},
+			{
+				"name": "ast_ly",
+				"type": "String"
+			},
+			{
+				"name": "ast_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "ast_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "upt_ty",
+				"type": "String"
+			},
+			{
+				"name": "upt_ly",
+				"type": "String"
+			},
+			{
+				"name": "upt_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "upt_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "aus_ty",
+				"type": "String"
+			},
+			{
+				"name": "aus_ly",
+				"type": "String"
+			},
+			{
+				"name": "aus_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "aus_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "transactions_ty",
+				"type": "String"
+			},
+			{
+				"name": "transactions_ly",
+				"type": "String"
+			},
+			{
+				"name": "transactions_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "transactions_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "return_value_ty",
+				"type": "String"
+			},
+			{
+				"name": "return_value_ly",
+				"type": "String"
+			},
+			{
+				"name": "return_value_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "return_value_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "return_net_sales_pct_ty",
+				"type": "String"
+			},
+			{
+				"name": "return_net_sales_pct_ly",
+				"type": "String"
+			},
+			{
+				"name": "return_net_sales_pct_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "discount_value_ty",
+				"type": "String"
+			},
+			{
+				"name": "discount_value_ly",
+				"type": "String"
+			},
+			{
+				"name": "discount_value_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "discount_value_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "discount_net_sales_pct_ty",
+				"type": "String"
+			},
+			{
+				"name": "discount_net_sales_pct_ly",
+				"type": "String"
+			},
+			{
+				"name": "discount_net_sales_pct_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "traffic_ty",
+				"type": "String"
+			},
+			{
+				"name": "traffic_ly",
+				"type": "String"
+			},
+			{
+				"name": "traffic_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "traffic_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "conversion_ty",
+				"type": "String"
+			},
+			{
+				"name": "conversion_ly",
+				"type": "String"
+			},
+			{
+				"name": "conversion_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "conversion_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "conversion_pct_ty",
+				"type": "String"
+			},
+			{
+				"name": "conversion_pct_ly",
+				"type": "String"
+			},
+			{
+				"name": "conversion_pct_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_acquisition_ty",
+				"type": "String"
+			},
+			{
+				"name": "nc_acquisition_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_acquisition_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_acquisition_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "nc_net_sales_value_ty",
+				"type": "String"
+			},
+			{
+				"name": "nc_net_sales_value_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_net_sales_value_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_net_sales_value_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "nc_net_sales_value_pct_ty",
+				"type": "String"
+			},
+			{
+				"name": "nc_net_sales_value_pct_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_net_sales_value_pct_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_transactions_ty",
+				"type": "String"
+			},
+			{
+				"name": "nc_transactions_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_transactions_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_transactions_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "nc_ast_ty",
+				"type": "String"
+			},
+			{
+				"name": "nc_ast_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_ast_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_ast_var_ly_pct",
+				"type": "String"
+			},
+			{
+				"name": "nc_upt_ty",
+				"type": "String"
+			},
+			{
+				"name": "nc_upt_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_upt_var_ly",
+				"type": "String"
+			},
+			{
+				"name": "nc_upt_var_ly_pct",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"quoteChar": "\"",
+				"nullValue": "",
+				"encodingName": null,
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "Mock_S3.csv",
+			"folderPath": "sourcefiles"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,72 @@
+{
+	"name": "DestinationDataset_nn9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "ProductID",
+				"type": "String"
+			},
+			{
+				"name": "ProductName",
+				"type": "String"
+			},
+			{
+				"name": "ProductDescription",
+				"type": "String"
+			},
+			{
+				"name": "Channel",
+				"type": "String"
+			},
+			{
+				"name": "Brand",
+				"type": "String"
+			},
+			{
+				"name": "Feature",
+				"type": "String"
+			},
+			{
+				"name": "Benefit",
+				"type": "String"
+			},
+			{
+				"name": "Ingredient",
+				"type": "String"
+			},
+			{
+				"name": "ProductForm",
+				"type": "String"
+			},
+			{
+				"name": "SolutionType",
+				"type": "String"
+			},
+			{
+				"name": "AverageRating",
+				"type": "Double"
+			},
+			{
+				"name": "NumberofReviews",
+				"type": "Int32"
+			},
+			{
+				"name": "Geography",
+				"type": "String"
+			},
+			{
+				"name": "CollectionDate",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Sample_Cosmetics_Product_Data]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

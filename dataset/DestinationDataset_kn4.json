@@ -1,0 +1,68 @@
+{
+	"name": "DestinationDataset_kn4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "ReviewID",
+				"type": "String"
+			},
+			{
+				"name": "Onlinestatem",
+				"type": "String"
+			},
+			{
+				"name": "PostDate",
+				"type": "String"
+			},
+			{
+				"name": "Title",
+				"type": "String"
+			},
+			{
+				"name": "Content",
+				"type": "String"
+			},
+			{
+				"name": "Geography",
+				"type": "String"
+			},
+			{
+				"name": "Channel",
+				"type": "String"
+			},
+			{
+				"name": "ProductID",
+				"type": "String"
+			},
+			{
+				"name": "Sentiment",
+				"type": "String"
+			},
+			{
+				"name": "Feature",
+				"type": "String"
+			},
+			{
+				"name": "Benefit",
+				"type": "String"
+			},
+			{
+				"name": "Ingredient",
+				"type": "String"
+			},
+			{
+				"name": "SolutionType",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Cosmetics_Social_Media_Sampled_Data_tcp1]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

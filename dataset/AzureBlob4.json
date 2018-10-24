@@ -1,0 +1,25 @@
+{
+	"name": "AzureBlob4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "elchdiblob_LS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tableList": {
+				"type": "Array"
+			}
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"rowDelimiter": "",
+				"treatEmptyAsNull": true
+			},
+			"fileName": "",
+			"folderPath": "samplefilesfiltered"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

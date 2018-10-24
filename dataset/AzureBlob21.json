@@ -1,0 +1,24 @@
+{
+	"name": "AzureBlob21",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "elchdiblob_LS",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "ELC_Q1_Database_Respondent_Table.csv",
+			"folderPath": "samplefilesfiltered/ELC_BHT_Q1_Database_Respondent_Table"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,13 @@
+{
+	"name": "AzureDataLakeStore2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureDataLakeStore",
+		"typeProperties": {
+			"dataLakeStoreUri": "https://elcpoc.azuredatalakestore.net/webhdfs/v1",
+			"tenant": "41ba96d6-8878-462b-b79a-23918180e0aa",
+			"subscriptionId": "9e2b9b92-e375-4dc6-9e75-299da79a68b6",
+			"resourceGroupName": "ELC_PoC"
+		}
+	}
+}

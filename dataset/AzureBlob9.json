@@ -1,0 +1,26 @@
+{
+	"name": "AzureBlob9",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "elchdiblob_LS",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": {
+				"value": "@activity('SampleLookUp').output.value.tablename",
+				"type": "Expression"
+			},
+			"folderPath": "samplefilesfiltered"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

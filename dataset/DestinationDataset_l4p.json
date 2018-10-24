@@ -1,0 +1,112 @@
+{
+	"name": "DestinationDataset_l4p",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "rowID",
+				"type": "String"
+			},
+			{
+				"name": "caseID",
+				"type": "String"
+			},
+			{
+				"name": "stackedBrand",
+				"type": "String"
+			},
+			{
+				"name": "brandClass",
+				"type": "String"
+			},
+			{
+				"name": "firstMentionQ8",
+				"type": "String"
+			},
+			{
+				"name": "unaidedAwarenessQ8",
+				"type": "String"
+			},
+			{
+				"name": "aidedAwarenessQ9",
+				"type": "String"
+			},
+			{
+				"name": "P12MBrandPurchaseQ10",
+				"type": "String"
+			},
+			{
+				"name": "firstTimeP12MPurchaseQ10a",
+				"type": "String"
+			},
+			{
+				"name": "P3MPurchaseQ11",
+				"type": "String"
+			},
+			{
+				"name": "P1MUsageQ12",
+				"type": "String"
+			},
+			{
+				"name": "considerQ15",
+				"type": "String"
+			},
+			{
+				"name": "considerationSetQ15a",
+				"type": "String"
+			},
+			{
+				"name": "subcatBrandUsageQ17FSC_bf",
+				"type": "String"
+			},
+			{
+				"name": "subcatBrandUsageQ17MU_bf",
+				"type": "String"
+			},
+			{
+				"name": "purchaseIntentQ18",
+				"type": "String"
+			},
+			{
+				"name": "brandLoveQ18b",
+				"type": "String"
+			},
+			{
+				"name": "brandLoveShare",
+				"type": "String"
+			},
+			{
+				"name": "BRAND_RATED",
+				"type": "String"
+			},
+			{
+				"name": "imageryQ19FSC_bf",
+				"type": "String"
+			},
+			{
+				"name": "imageryQ19MU_bf",
+				"type": "String"
+			},
+			{
+				"name": "touchpointsQ20_bf",
+				"type": "String"
+			},
+			{
+				"name": "barriersQ21FSC_bf",
+				"type": "String"
+			},
+			{
+				"name": "barriersQ21MU_bf",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Sample_ELC_Database_Brand_Table_ADF]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,24 @@
+{
+	"name": "FileShare2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedService4",
+			"type": "LinkedServiceReference"
+		},
+		"type": "FileShare",
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "ELC_BHT_Q1_Database_Respondent_Table.csv",
+			"folderPath": "/elc/ELC_POC"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

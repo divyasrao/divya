@@ -1,0 +1,83 @@
+{
+	"name": "CopyPipeline_kn4",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_kn4",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "samplefilesfiltered/Cosmetics_Social_Media_Sampled_Data_finaldata.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Cosmetics_Social_Media_Sampled_Data_tcp1]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"writeBatchSize": 10000,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "elchdiblob_LS",
+							"type": "LinkedServiceReference"
+						},
+						"path": "samplefilesfiltered"
+					},
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Review ID": "ReviewID",
+							"Online statement ID": "Onlinestatem",
+							"Post Date": "PostDate",
+							"Title": "Title",
+							"Content": "Content",
+							"Geography": "Geography",
+							"Channel": "Channel",
+							"Product ID": "ProductID",
+							"Sentiment": "Sentiment",
+							"Feature": "Feature",
+							"Benefit": "Benefit",
+							"Ingredient": "Ingredient",
+							"Solution Type": "SolutionType"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_kn4",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_kn4",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

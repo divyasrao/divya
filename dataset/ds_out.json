@@ -1,0 +1,14 @@
+{
+	"name": "ds_out",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "storageLinkedService_NEW",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"folderPath": "newtesting"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

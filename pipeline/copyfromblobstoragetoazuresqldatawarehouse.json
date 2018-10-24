@@ -1,0 +1,165 @@
+{
+	"name": "copyfromblobstoragetoazuresqldatawarehouse",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_aps",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "samplefilesfiltered/ELC_BHT_Q1_Database_Respondent_Table.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Sample_ELC_BHT_Q1_Database_Respondent_Table_ADF]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"writeBatchSize": 10000,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "elchdiblob_LS",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"caseID": "caseID",
+							"round": "round",
+							"weight": "weight",
+							"year": "year",
+							"month": "month",
+							"finalAge": "finalAge",
+							"adult": "adult",
+							"ageGroupWide": "ageGroupWide",
+							"ageGroupTight": "ageGroupTight",
+							"category": "category",
+							"prestigeRetailer": "prestigeRetailer",
+							"Groupcode": "Groupcode",
+							"country": "country",
+							"chinaTier": "chinaTier",
+							"countryTiered": "countryTiered",
+							"eduCN": "eduCN",
+							"eduFR": "eduFR",
+							"eduSK": "eduSK",
+							"eduUK": "eduUK",
+							"eduUS": "eduUS",
+							"ethUK": "ethUK",
+							"hispOriginUS": "hispOriginUS",
+							"ethUS_1": "ethUS_1",
+							"ethUS_2": "ethUS_2",
+							"ethUS_3": "ethUS_3",
+							"ethUS_4": "ethUS_4",
+							"ethUS_5": "ethUS_5",
+							"ethUS_6": "ethUS_6",
+							"ethUS_7": "ethUS_7",
+							"ETH_QUOTAS_US_1": "ETH_QUOTAS_US_1",
+							"ETH_QUOTAS_US_2": "ETH_QUOTAS_US_2",
+							"ETH_QUOTAS_US_3": "ETH_QUOTAS_US_3",
+							"ETH_QUOTAS_US_4": "ETH_QUOTAS_US_4",
+							"maritalStatusCN": "maritalStatusCN",
+							"maritalStatusFR": "maritalStatusFR",
+							"maritalStatusSK": "maritalStatusSK",
+							"maritalStatusUK": "maritalStatusUK",
+							"maritalStatusUS": "maritalStatusUS",
+							"hhComp": "hhComp",
+							"hhCompSK": "hhCompSK",
+							"kidsinHH": "kidsinHH",
+							"kidsInHHSK": "kidsInHHSK",
+							"income": "income",
+							"incomeMedian": "incomeMedian",
+							"employment": "employment",
+							"employmentSK": "employmentSK",
+							"region": "region",
+							"regionUS": "regionUS",
+							"retailerDeptStoreQ13_bf": "retailerDeptStoreQ13_bf",
+							"retailerUpscaleDeptStoreQ13_bf": "retailerUpscaleDeptStoreQ13_bf",
+							"retailerRegularDeptStoreQ13_bf": "retailerRegularDeptStoreQ13_bf",
+							"retailerDiscountDeptStoreQ13_bf": "retailerDiscountDeptStoreQ13_bf",
+							"retailerFreeStandingQ13_bf": "retailerFreeStandingQ13_bf",
+							"retailerSpecMultiQ13_bf": "retailerSpecMultiQ13_bf",
+							"retailerDrugStoreQ13_bf": "retailerDrugStoreQ13_bf",
+							"retailerHealthBeautyStoreQ13_bf": "retailerHealthBeautyStoreQ13_bf",
+							"retailerMassMerchandiserQ13_bf": "retailerMassMerchandiserQ13_bf",
+							"retailerChainStoreQ13_bf": "retailerChainStoreQ13_bf",
+							"retailerShoppingMallsQ13_bf": "retailerShoppingMallsQ13_bf",
+							"retailerDutyFreeQ13_bf": "retailerDutyFreeQ13_bf",
+							"retailerOfflineOverseasQ13_bf": "retailerOfflineOverseasQ13_bf",
+							"retailerDoorToDoorQ13_bf": "retailerDoorToDoorQ13_bf",
+							"retailerDirectSalesTVQ13_bf": "retailerDirectSalesTVQ13_bf",
+							"retailerOnlineQ13_bf": "retailerOnlineQ13_bf",
+							"retailerSamplingSubscriptionQ13_bf": "retailerSamplingSubscriptionQ13_bf",
+							"retailerDistinctChannelsQ13_bf": "retailerDistinctChannelsQ13_bf",
+							"retailerDeptStoreQ14_bf": "retailerDeptStoreQ14_bf",
+							"retailerUpscaleDeptStoreQ14_bf": "retailerUpscaleDeptStoreQ14_bf",
+							"retailerRegularDeptStoreQ14_bf": "retailerRegularDeptStoreQ14_bf",
+							"retailerDiscountDeptStoreQ14_bf": "retailerDiscountDeptStoreQ14_bf",
+							"retailerFreeStandingQ14_bf": "retailerFreeStandingQ14_bf",
+							"retailerSpecMultiQ14_bf": "retailerSpecMultiQ14_bf",
+							"retailerDrugStoreQ14_bf": "retailerDrugStoreQ14_bf",
+							"retailerHealthBeautyStoreQ14_bf": "retailerHealthBeautyStoreQ14_bf",
+							"retailerMassMerchandiserQ14_bf": "retailerMassMerchandiserQ14_bf",
+							"retailerChainStoreQ14_bf": "retailerChainStoreQ14_bf",
+							"retailerShoppingMallsQ14_bf": "retailerShoppingMallsQ14_bf",
+							"retailerDutyFreeQ14_bf": "retailerDutyFreeQ14_bf",
+							"retailerOfflineOverseasQ14_bf": "retailerOfflineOverseasQ14_bf",
+							"retailerDoorToDoorQ14_bf": "retailerDoorToDoorQ14_bf",
+							"retailerDirectSalesTVQ14_bf": "retailerDirectSalesTVQ14_bf",
+							"retailerOnlineQ14_bf": "retailerOnlineQ14_bf",
+							"retailerSamplingSubscriptionQ14_bf": "retailerSamplingSubscriptionQ14_bf",
+							"retailerDistinctChannelsQ14_bf": "retailerDistinctChannelsQ14_bf",
+							"subcatPenetrationQ16FSC_bf": "subcatPenetrationQ16FSC_bf",
+							"numberSubcatsUsedFSC": "numberSubcatsUsedFSC",
+							"subcatPenetrationQ16MU_bf": "subcatPenetrationQ16MU_bf",
+							"numberSubcatsUsedMU": "numberSubcatsUsedMU",
+							"brandsAware": "brandsAware",
+							"ELCBrandsPurchasedP3M": "ELCBrandsPurchasedP3M",
+							"NonELCBrandsPurchasedP3M": "NonELCBrandsPurchasedP3M",
+							"AllBrandsPurchasedP3M": "AllBrandsPurchasedP3M",
+							"MassBrandsPurchasedP3M": "MassBrandsPurchasedP3M",
+							"MassBrandBuyerP3M": "MassBrandBuyerP3M",
+							"incomeGroup": "incomeGroup",
+							"numMarketBrands": "numMarketBrands"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_aps",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_aps",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

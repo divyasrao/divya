@@ -1,0 +1,23 @@
+{
+	"name": "trigger15mins",
+	"properties": {
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline20",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2018-09-27T07:26:31.494Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

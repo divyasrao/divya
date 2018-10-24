@@ -1,0 +1,411 @@
+{
+	"name": "SourceDataset_aps",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorage8",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "caseID",
+				"type": "Int64"
+			},
+			{
+				"name": "round",
+				"type": "Int64"
+			},
+			{
+				"name": "weight",
+				"type": "Int64"
+			},
+			{
+				"name": "year",
+				"type": "Int64"
+			},
+			{
+				"name": "month",
+				"type": "Int64"
+			},
+			{
+				"name": "finalAge",
+				"type": "Int64"
+			},
+			{
+				"name": "adult",
+				"type": "Int64"
+			},
+			{
+				"name": "ageGroupWide",
+				"type": "Int64"
+			},
+			{
+				"name": "ageGroupTight",
+				"type": "Int64"
+			},
+			{
+				"name": "category",
+				"type": "Int64"
+			},
+			{
+				"name": "prestigeRetailer",
+				"type": "Int64"
+			},
+			{
+				"name": "Groupcode",
+				"type": "Int64"
+			},
+			{
+				"name": "country",
+				"type": "Int64"
+			},
+			{
+				"name": "chinaTier",
+				"type": "String"
+			},
+			{
+				"name": "countryTiered",
+				"type": "Int64"
+			},
+			{
+				"name": "eduCN",
+				"type": "String"
+			},
+			{
+				"name": "eduFR",
+				"type": "String"
+			},
+			{
+				"name": "eduSK",
+				"type": "String"
+			},
+			{
+				"name": "eduUK",
+				"type": "String"
+			},
+			{
+				"name": "eduUS",
+				"type": "String"
+			},
+			{
+				"name": "ethUK",
+				"type": "String"
+			},
+			{
+				"name": "hispOriginUS",
+				"type": "String"
+			},
+			{
+				"name": "ethUS_1",
+				"type": "String"
+			},
+			{
+				"name": "ethUS_2",
+				"type": "String"
+			},
+			{
+				"name": "ethUS_3",
+				"type": "String"
+			},
+			{
+				"name": "ethUS_4",
+				"type": "String"
+			},
+			{
+				"name": "ethUS_5",
+				"type": "String"
+			},
+			{
+				"name": "ethUS_6",
+				"type": "String"
+			},
+			{
+				"name": "ethUS_7",
+				"type": "String"
+			},
+			{
+				"name": "ETH_QUOTAS_US_1",
+				"type": "String"
+			},
+			{
+				"name": "ETH_QUOTAS_US_2",
+				"type": "String"
+			},
+			{
+				"name": "ETH_QUOTAS_US_3",
+				"type": "String"
+			},
+			{
+				"name": "ETH_QUOTAS_US_4",
+				"type": "String"
+			},
+			{
+				"name": "maritalStatusCN",
+				"type": "String"
+			},
+			{
+				"name": "maritalStatusFR",
+				"type": "String"
+			},
+			{
+				"name": "maritalStatusSK",
+				"type": "String"
+			},
+			{
+				"name": "maritalStatusUK",
+				"type": "String"
+			},
+			{
+				"name": "maritalStatusUS",
+				"type": "String"
+			},
+			{
+				"name": "hhComp",
+				"type": "String"
+			},
+			{
+				"name": "hhCompSK",
+				"type": "String"
+			},
+			{
+				"name": "kidsinHH",
+				"type": "String"
+			},
+			{
+				"name": "kidsInHHSK",
+				"type": "String"
+			},
+			{
+				"name": "income",
+				"type": "Int64"
+			},
+			{
+				"name": "incomeMedian",
+				"type": "String"
+			},
+			{
+				"name": "employment",
+				"type": "String"
+			},
+			{
+				"name": "employmentSK",
+				"type": "Int64"
+			},
+			{
+				"name": "region",
+				"type": "Int64"
+			},
+			{
+				"name": "regionUS",
+				"type": "String"
+			},
+			{
+				"name": "retailerDeptStoreQ13_bf",
+				"type": "String"
+			},
+			{
+				"name": "retailerUpscaleDeptStoreQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerRegularDeptStoreQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDiscountDeptStoreQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerFreeStandingQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerSpecMultiQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDrugStoreQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerHealthBeautyStoreQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerMassMerchandiserQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerChainStoreQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerShoppingMallsQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDutyFreeQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerOfflineOverseasQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDoorToDoorQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDirectSalesTVQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerOnlineQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerSamplingSubscriptionQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDistinctChannelsQ13_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDeptStoreQ14_bf",
+				"type": "String"
+			},
+			{
+				"name": "retailerUpscaleDeptStoreQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerRegularDeptStoreQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDiscountDeptStoreQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerFreeStandingQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerSpecMultiQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDrugStoreQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerHealthBeautyStoreQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerMassMerchandiserQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerChainStoreQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerShoppingMallsQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDutyFreeQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerOfflineOverseasQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDoorToDoorQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDirectSalesTVQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerOnlineQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerSamplingSubscriptionQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "retailerDistinctChannelsQ14_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "subcatPenetrationQ16FSC_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "numberSubcatsUsedFSC",
+				"type": "String"
+			},
+			{
+				"name": "subcatPenetrationQ16MU_bf",
+				"type": "Int64"
+			},
+			{
+				"name": "numberSubcatsUsedMU",
+				"type": "String"
+			},
+			{
+				"name": "brandsAware",
+				"type": "Int64"
+			},
+			{
+				"name": "ELCBrandsPurchasedP3M",
+				"type": "Int64"
+			},
+			{
+				"name": "NonELCBrandsPurchasedP3M",
+				"type": "Int64"
+			},
+			{
+				"name": "AllBrandsPurchasedP3M",
+				"type": "Int64"
+			},
+			{
+				"name": "MassBrandsPurchasedP3M",
+				"type": "Int64"
+			},
+			{
+				"name": "MassBrandBuyerP3M",
+				"type": "Int64"
+			},
+			{
+				"name": "incomeGroup",
+				"type": "Int64"
+			},
+			{
+				"name": "numMarketBrands",
+				"type": "Int64"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "\n",
+				"nullValue": "\\N",
+				"encodingName": null,
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "ELC_BHT_Q1_Database_Respondent_Table.csv",
+			"folderPath": "samplefilesfiltered"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

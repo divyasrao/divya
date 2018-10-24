@@ -1,0 +1,68 @@
+{
+	"name": "DestinationDataset_6ea",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "ReviewID",
+				"type": "Int32"
+			},
+			{
+				"name": "OnlinestatementID",
+				"type": "Int32"
+			},
+			{
+				"name": "PostDate",
+				"type": "String"
+			},
+			{
+				"name": "Title",
+				"type": "String"
+			},
+			{
+				"name": "Content",
+				"type": "String"
+			},
+			{
+				"name": "Geography",
+				"type": "String"
+			},
+			{
+				"name": "Channel",
+				"type": "String"
+			},
+			{
+				"name": "ProductID",
+				"type": "Int32"
+			},
+			{
+				"name": "Sentiment",
+				"type": "String"
+			},
+			{
+				"name": "Feature",
+				"type": "String"
+			},
+			{
+				"name": "Benefit",
+				"type": "String"
+			},
+			{
+				"name": "Ingredient",
+				"type": "String"
+			},
+			{
+				"name": "SolutionType",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[Cosmetics_Social_Media_Sampled_Data_ADF2]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

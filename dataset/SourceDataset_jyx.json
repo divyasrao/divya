@@ -1,0 +1,121 @@
+{
+	"name": "SourceDataset_jyx",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Sftp1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "FileShare",
+		"structure": [
+			{
+				"name": "rowID",
+				"type": "Int64"
+			},
+			{
+				"name": "caseID",
+				"type": "Int64"
+			},
+			{
+				"name": "stackedBrand",
+				"type": "Int64"
+			},
+			{
+				"name": "brandClass",
+				"type": "Int64"
+			},
+			{
+				"name": "firstMentionQ8",
+				"type": "Int64"
+			},
+			{
+				"name": "unaidedAwarenessQ8",
+				"type": "Int64"
+			},
+			{
+				"name": "aidedAwarenessQ9",
+				"type": "Int64"
+			},
+			{
+				"name": "P12MBrandPurchaseQ10",
+				"type": "Int64"
+			},
+			{
+				"name": "firstTimeP12MPurchaseQ10a",
+				"type": "Int64"
+			},
+			{
+				"name": "P3MPurchaseQ11",
+				"type": "Int64"
+			},
+			{
+				"name": "P1MUsageQ12",
+				"type": "Int64"
+			},
+			{
+				"name": "considerQ15",
+				"type": "String"
+			},
+			{
+				"name": "considerationSetQ15a",
+				"type": "Int64"
+			},
+			{
+				"name": "subcatBrandUsageQ17FSC_bf",
+				"type": "String"
+			},
+			{
+				"name": "subcatBrandUsageQ17MU_bf",
+				"type": "String"
+			},
+			{
+				"name": "purchaseIntentQ18",
+				"type": "String"
+			},
+			{
+				"name": "brandLoveQ18b",
+				"type": "Int64"
+			},
+			{
+				"name": "brandLoveShare",
+				"type": "String"
+			},
+			{
+				"name": "BRAND_RATED",
+				"type": "String"
+			},
+			{
+				"name": "imageryQ19FSC_bf",
+				"type": "String"
+			},
+			{
+				"name": "imageryQ19MU_bf",
+				"type": "String"
+			},
+			{
+				"name": "touchpointsQ20_bf",
+				"type": "String"
+			},
+			{
+				"name": "barriersQ21FSC_bf",
+				"type": "String"
+			},
+			{
+				"name": "barriersQ21MU_bf",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "ELC_BHT_Q1_Database_Brand_Table.csv",
+			"folderPath": "/elc/ELC_POC"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

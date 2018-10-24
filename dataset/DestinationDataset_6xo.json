@@ -1,0 +1,300 @@
+{
+	"name": "DestinationDataset_6xo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDW1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "CALYEAR",
+				"type": "String"
+			},
+			{
+				"name": "CALMONTH",
+				"type": "String"
+			},
+			{
+				"name": "CALQUARTER",
+				"type": "String"
+			},
+			{
+				"name": "CALQUART1",
+				"type": "Int32"
+			},
+			{
+				"name": "FISCYEAR",
+				"type": "Int32"
+			},
+			{
+				"name": "FISCPER",
+				"type": "String"
+			},
+			{
+				"name": "FISCPER3",
+				"type": "Int32"
+			},
+			{
+				"name": "ZFISCQTER",
+				"type": "String"
+			},
+			{
+				"name": "ZFISCQTER___T",
+				"type": "String"
+			},
+			{
+				"name": "ZFISCQTR1",
+				"type": "Int32"
+			},
+			{
+				"name": "ZFISCQTR1___T",
+				"type": "String"
+			},
+			{
+				"name": "ZLAUQRT",
+				"type": "String"
+			},
+			{
+				"name": "ZLAUFQTR",
+				"type": "String"
+			},
+			{
+				"name": "ZLAUYR",
+				"type": "Int32"
+			},
+			{
+				"name": "ZLAUFYR",
+				"type": "Int32"
+			},
+			{
+				"name": "ZLAUMTH",
+				"type": "String"
+			},
+			{
+				"name": "ZLAUPER",
+				"type": "String"
+			},
+			{
+				"name": "ZMAJORCAT",
+				"type": "Int32"
+			},
+			{
+				"name": "ZMAJORCAT___T",
+				"type": "String"
+			},
+			{
+				"name": "ZCATEGORY",
+				"type": "String"
+			},
+			{
+				"name": "ZCATEGORY___T",
+				"type": "String"
+			},
+			{
+				"name": "ZAFFSBRGN",
+				"type": "String"
+			},
+			{
+				"name": "ZAFFSBRGN___T",
+				"type": "String"
+			},
+			{
+				"name": "ZAFFLVL5",
+				"type": "String"
+			},
+			{
+				"name": "ZAFFLVL5___T",
+				"type": "String"
+			},
+			{
+				"name": "ZBRAND",
+				"type": "String"
+			},
+			{
+				"name": "ZBRAND___T",
+				"type": "String"
+			},
+			{
+				"name": "DIVISION",
+				"type": "String"
+			},
+			{
+				"name": "DIVISION___T",
+				"type": "String"
+			},
+			{
+				"name": "CURRENCY",
+				"type": "String"
+			},
+			{
+				"name": "CURRENCY___T",
+				"type": "String"
+			},
+			{
+				"name": "ZMKTBRD",
+				"type": "String"
+			},
+			{
+				"name": "ZMKTCTRY",
+				"type": "String"
+			},
+			{
+				"name": "ZMKTPRD",
+				"type": "String"
+			},
+			{
+				"name": "ZBTECAT",
+				"type": "String"
+			},
+			{
+				"name": "ZIRICAT",
+				"type": "String"
+			},
+			{
+				"name": "ZNLSCAT",
+				"type": "String"
+			},
+			{
+				"name": "ZNPDSSEG",
+				"type": "String"
+			},
+			{
+				"name": "ZBNFFORM",
+				"type": "String"
+			},
+			{
+				"name": "BENEFITS_LIST",
+				"type": "String"
+			},
+			{
+				"name": "ZFRANCH",
+				"type": "String"
+			},
+			{
+				"name": "ZNEWIN",
+				"type": "String"
+			},
+			{
+				"name": "ZSPF",
+				"type": "String"
+			},
+			{
+				"name": "ZCORP",
+				"type": "String"
+			},
+			{
+				"name": "ZNPDFORM",
+				"type": "String"
+			},
+			{
+				"name": "ZNPDITEM",
+				"type": "String"
+			},
+			{
+				"name": "ZNPDCHAN",
+				"type": "String"
+			},
+			{
+				"name": "ZSEGCAT",
+				"type": "String"
+			},
+			{
+				"name": "ZSEGSCAT",
+				"type": "String"
+			},
+			{
+				"name": "ZCOMPANY",
+				"type": "String"
+			},
+			{
+				"name": "ZLINES",
+				"type": "String"
+			},
+			{
+				"name": "ZGOWNER",
+				"type": "String"
+			},
+			{
+				"name": "ZSWZCAT",
+				"type": "String"
+			},
+			{
+				"name": "ZSWZMAN",
+				"type": "String"
+			},
+			{
+				"name": "ZSWZSEG",
+				"type": "String"
+			},
+			{
+				"name": "ZSWZSSEG",
+				"type": "String"
+			},
+			{
+				"name": "Source",
+				"type": "String"
+			},
+			{
+				"name": "BASE_UOM",
+				"type": "String"
+			},
+			{
+				"name": "BASE_UOM___T",
+				"type": "String"
+			},
+			{
+				"name": "ZMKT_NPRC",
+				"type": "Single"
+			},
+			{
+				"name": "ZMKT_RPRC",
+				"type": "Single"
+			},
+			{
+				"name": "AMOUNT_USD_CURRENCY",
+				"type": "String"
+			},
+			{
+				"name": "CALQTR_DATE",
+				"type": "DateTime"
+			},
+			{
+				"name": "CALMONTH_DATE",
+				"type": "DateTime"
+			},
+			{
+				"name": "FY_LABEL",
+				"type": "String"
+			},
+			{
+				"name": "FQ_LABEL",
+				"type": "String"
+			},
+			{
+				"name": "CurrFiscYear",
+				"type": "Int32"
+			},
+			{
+				"name": "CurrCalYear",
+				"type": "Int32"
+			},
+			{
+				"name": "AMOUNT",
+				"type": "Single"
+			},
+			{
+				"name": "ZMKTQTY",
+				"type": "Single"
+			},
+			{
+				"name": "AMOUNT_USD",
+				"type": "Single"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[sample_HANA_NPD_output_NEW]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

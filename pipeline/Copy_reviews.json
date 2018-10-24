@@ -1,0 +1,87 @@
+{
+	"name": "Copy_reviews",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_f1x",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "source-files/elc/Signals/Cosmetics_Reviews_Sampled_Data.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Cosmetics_Reviews_Sampled_Data_adf]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"writeBatchSize": 10000,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "elchdiblob_LS",
+							"type": "LinkedServiceReference"
+						},
+						"path": "samplefilesfiltered"
+					},
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Review ID": "ReviewID",
+							"Online Statement ID": "OnlineStatementID",
+							"Review Date": "ReviewDate",
+							"Title": "Title",
+							"Content": "Content",
+							"Geography": "Geography",
+							"Channel": "Channel",
+							"Product ID": "ProductID",
+							"Rating": "Rating",
+							"Sentiment": "Sentiment",
+							"Feature": "Feature",
+							"Benefit": "Benefit",
+							"Ingredient": "Ingredient",
+							"Brand": "Brand",
+							"Solution Type": "SolutionType",
+							"Product": "Product",
+							"Product Form": "ProductForm"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_f1x",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_f1x",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

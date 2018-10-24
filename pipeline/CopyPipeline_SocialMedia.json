@@ -1,0 +1,85 @@
+{
+	"name": "CopyPipeline_SocialMedia",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_6ea",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "samplefilesfiltered/Cosmetics_Social_Media_Sampled_Data_finaldata.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Cosmetics_Social_Media_Sampled_Data_ADF2]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"writeBatchSize": 10000,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "elchdiblob_LS",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Review ID": "ReviewID",
+							"Online statement ID": "OnlinestatementID",
+							"Post Date": "PostDate",
+							"Title": "Title",
+							"Content": "Content",
+							"Geography": "Geography",
+							"Channel": "Channel",
+							"Product ID": "ProductID",
+							"Sentiment": "Sentiment",
+							"Feature": "Feature",
+							"Benefit": "Benefit",
+							"Ingredient": "Ingredient",
+							"Solution Type": "SolutionType"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SocialMediaDataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_6ea",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "EsteeLauderLoadPipeline"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

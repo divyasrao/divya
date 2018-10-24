@@ -1,0 +1,86 @@
+{
+	"name": "CopyPipeline_Products",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_nn9",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "samplefilesfiltered/Cosmetics_Product_Sampled_Data.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "[dbo].[Sample_Cosmetics_Product_Data]"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlDWSink",
+						"allowPolyBase": true,
+						"writeBatchSize": 10000,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": true
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "elchdiblob_LS",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"dataIntegrationUnits": 0,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"Product ID": "ProductID",
+							"Product Name": "ProductName",
+							"Product Description": "ProductDescription",
+							"Channel": "Channel",
+							"Brand": "Brand",
+							"Feature": "Feature",
+							"Benefit": "Benefit",
+							"Ingredient": "Ingredient",
+							"Product Form": "ProductForm",
+							"Solution Type": "SolutionType",
+							"Average Rating": "AverageRating",
+							"Number of Reviews": "NumberofReviews",
+							"Geography": "Geography",
+							"Collection Date": "CollectionDate"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_nn9",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_nn9",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"folder": {
+			"name": "EsteeLauderLoadPipeline"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

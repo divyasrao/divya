@@ -1,0 +1,32 @@
+{
+	"name": "DestinationDataset_tn3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ASDWLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlDWTable",
+		"structure": [
+			{
+				"name": "id",
+				"type": "Int32"
+			},
+			{
+				"name": "TABLE_SCHEMA",
+				"type": "String"
+			},
+			{
+				"name": "TABLE_NAME",
+				"type": "String"
+			},
+			{
+				"name": "TABLE_URL",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[SourceTables]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

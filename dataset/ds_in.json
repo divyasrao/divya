@@ -1,0 +1,15 @@
+{
+	"name": "ds_in",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "storageLinkedService_NEW",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": "Cosmetics_Social_Media_Sampled_Data_new.csv",
+			"folderPath": "testing"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

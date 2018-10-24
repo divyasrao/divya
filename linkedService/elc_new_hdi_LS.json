@@ -1,0 +1,16 @@
+{
+	"name": "elc_new_hdi_LS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "HDInsight",
+		"typeProperties": {
+			"clusterUri": "https://elc-spark-blob.azurehdinsight.net",
+			"userName": "elcspark",
+			"linkedServiceName": {
+				"referenceName": "elchdiblob_LS",
+				"type": "LinkedServiceReference"
+			},
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFOVFVJVC1EQVRBLUZBQ1RPUllfZDY0YWI2MjgtOTJjNC00OGViLWFkMDYtYmRhNDM5NzkzZTAwIg0KfQ=="
+		}
+	}
+}
