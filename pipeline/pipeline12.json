@@ -11,15 +11,6 @@
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
-				},
-				"typeProperties": {
-					"dataset": {
-						"referenceName": "AzureBlob4",
-						"type": "DatasetReference"
-					},
-					"fieldList": [
-						"itemName"
-					]
 				}
 			},
 			{
