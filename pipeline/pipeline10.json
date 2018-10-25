@@ -13,14 +13,6 @@
 					"secureInput": false
 				},
 				"typeProperties": {
-					"source": {
-						"type": "BlobSource",
-						"recursive": true
-					},
-					"dataset": {
-						"referenceName": "AzureBlob4",
-						"type": "DatasetReference"
-					},
 					"firstRowOnly": false
 				}
 			},
