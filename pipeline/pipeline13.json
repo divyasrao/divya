@@ -11,6 +11,16 @@
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"dataset": {
+						"referenceName": "AzureBlob4",
+						"type": "DatasetReference"
+					}
 				}
 			}
 		]
